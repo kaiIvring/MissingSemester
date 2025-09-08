@@ -81,7 +81,7 @@ ssh myserver journalctl
 
 What we just wrote was a simple _regular expression_; a powerful
 construct that lets you match text against patterns. The `s` command is
-written on the form: `s/REGEX/SUBSTITUTION/`, where `REGEX` is the
+written in the form: `s/REGEX/SUBSTITUTION/`, where `REGEX` is the
 regular expression you want to search for, and `SUBSTITUTION` is the
 text you want to substitute matching text with.
 
@@ -165,7 +165,7 @@ characters where the username is. Then we're matching on any single word
 "port" followed by a sequence of digits. Then possibly the suffix
 `[preauth]`, and then the end of the line.
 
-Notice that with this technique, as username of "Disconnected from"
+Notice that with this technique, a username of "Disconnected from"
 won't confuse us any more. Can you see why?
 
 There is one problem with this though, and that is that the entire log
@@ -245,7 +245,7 @@ wouldn't matter, but we're here to learn!
 If we wanted the _least_ common ones, we could use `head` instead of
 `tail`. There's also `sort -r`, which sorts in reverse order.
 
-Okay, so that's pretty cool, but what if we'd like these extract only the usernames
+Okay, so that's pretty cool, but what if we'd like to extract only the usernames
 as a comma-separated list instead of one per line, perhaps for a config file?
 
 ```bash
@@ -433,7 +433,7 @@ ffmpeg -loglevel panic -i /dev/video0 -frames 1 -f image2 -
    your friend). And finally, eliminate any line whose count is 3 (since
    it _was_ shared among all the boots).
 6. Find an online data set like [this
-   one](https://stats.wikimedia.org/EN/TablesWikipediaZZ.htm), [this
+   one](https://commons.wikimedia.org/wiki/Data:Wikipedia_statistics/data.tab), [this
    one](https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016/topic-pages/tables/table-1),
    or maybe one [from
    here](https://www.springboard.com/blog/data-science/free-public-data-sets-data-science-project/).

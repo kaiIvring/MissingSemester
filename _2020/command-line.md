@@ -335,7 +335,7 @@ Key-based authentication exploits public-key cryptography to prove to the server
 
 To generate a pair you can run [`ssh-keygen`](https://www.man7.org/linux/man-pages/man1/ssh-keygen.1.html).
 ```bash
-ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519
+ssh-keygen -a 100 -t ed25519 -f ~/.ssh/id_ed25519
 ```
 You should choose a passphrase, to avoid someone who gets hold of your private key to access authorized servers. Use [`ssh-agent`](https://www.man7.org/linux/man-pages/man1/ssh-agent.1.html) or [`gpg-agent`](https://linux.die.net/man/1/gpg-agent) so you do not have to type your passphrase every time.
 
@@ -383,7 +383,7 @@ The most common scenario is local port forwarding, where a service in the remote
 
 We have covered many many arguments that we can pass. A tempting alternative is to create shell aliases that look like
 ```bash
-alias my_server="ssh -i ~/.id_ed25519 --port 2222 -L 9999:localhost:8888 foobar@remote_server
+alias my_server="ssh -i ~/.id_ed25519 --port 2222 -L 9999:localhost:8888 foobar@remote_server"
 ```
 
 However, there is a better alternative using `~/.ssh/config`.
@@ -470,7 +470,7 @@ One way to achieve this is to use the [`wait`](https://www.man7.org/linux/man-pa
 
 ## Aliases
 
-1. Create an alias `dc` that resolves to `cd` for when you type it wrongly.
+1. Create an alias `dc` that resolves to `cd` for when you type it wrong.
 
 1.  Run `history | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 10`  to get your top 10 most used commands and consider writing shorter aliases for them. Note: this works for Bash; if you're using ZSH, use `history 1` instead of just `history`.
 
@@ -492,7 +492,7 @@ Let's get you up to speed with dotfiles.
 
 Install a Linux virtual machine (or use an already existing one) for this exercise. If you are not familiar with virtual machines check out [this](https://hibbard.eu/install-ubuntu-virtual-box/) tutorial for installing one.
 
-1. Go to `~/.ssh/` and check if you have a pair of SSH keys there. If not, generate them with `ssh-keygen -o -a 100 -t ed25519`. It is recommended that you use a password and use `ssh-agent` , more info [here](https://www.ssh.com/ssh/agent).
+1. Go to `~/.ssh/` and check if you have a pair of SSH keys there. If not, generate them with `ssh-keygen -a 100 -t ed25519`. It is recommended that you use a password and use `ssh-agent` , more info [here](https://www.ssh.com/ssh/agent).
 1. Edit `.ssh/config` to have an entry as follows
 
     ```bash

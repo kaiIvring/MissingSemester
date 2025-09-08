@@ -102,7 +102,10 @@ with `<C-v>` (Ctrl-V, sometimes also written `^V`), and Command-line mode with
 
 You use the `<ESC>` key a lot when using Vim: consider remapping Caps Lock to
 Escape ([macOS
-instructions](https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_macOS)).
+instructions](https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_macOS))
+or create an [alternative 
+mapping](https://vim.fandom.com/wiki/Avoid_the_escape_key#Mappings) for `<ESC>` 
+with a simple key sequence.
 
 # Basics
 
@@ -195,7 +198,7 @@ are also called "verbs", because verbs act on nouns.
 - `c{motion}` change {motion}
     - e.g. `cw` is change word
     - like `d{motion}` followed by `i`
-- `x` delete character (equal do `dl`)
+- `x` delete character (equal to `dl`)
 - `s` substitute character (equal to `cl`)
 - Visual mode + manipulation
     - select text, `d` to delete it or `c` to change it
